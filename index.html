@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">    
+    <title>Church+ Donation</title>
+</head>
+<body>
+      <!-- Page loader -->
+  <div class="spinner ">
+    <div class="spinner-border text-dark" role="status"> <span class="sr-only">Loading...</span> </div>
+  </div>
+      <!-- Donation summary modal -->
+  <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true" >
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">Donation Summary</h5>
+            </div>
+        <div class="modal-body">            
+            <div class="container">
+              <p>Optional info</p>
+              <div class="form-group">
+                <input type="email" name="name" id="name"class="form-control" placeholder="Full name">
+              </div>
+              <div class="form-group">
+                <input type="email" name="email" id="email"class="form-control" placeholder="Email">
+              </div>
+              <div class="con">
+                <h3 id="totalSumary"></h3>
+              </div>
+            </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal" id="edit">Edit</button>
+          <button type="button" class="btn btn-dark">Continue</button>
+        </div>
+      </div>
+    </div>
+  </div>    
+  <!-- Form for offering collection -->
+  <div class="holder ">
+    <div class="bg text-center">
+      <div class="pt-5">  
+          <h3 class="text-white">Church Plus Donation </h3>
+          <div class="total text-white">
+            <h5 id="info" class="mt-4 mb-0">
+              Total
+            </h5>
+            <h1 id="total">0.00</h1>
+          </div>
+      </div>
+    </div> 
+    <div class="container col-md-10 col-lg-6 col-sm-12  ">
+      <div class="card text-center col-12 p-5">
+        <div class="card-body">
+          <h4 class="card-title">Kindly Input Your Giving Amount</h4>
+        </div>
+        <div class="form-group">
+          <div class="error text-center">Please Enter Your Offering Amount :)</div>
+          <form action="#" method="post" onsubmit="donate()">
+          <div class="form-group text-left">
+            <label for="">Currency</label>
+            <select class="form-control" name="" id="currencyType">              
+              <option>NGN</option>
+              <option>USD</option>
+              <option>GBP</option>              
+            </select>
+          </div>
+          <div class="row">
+              <div class="form-group col-sm-12 col-lg-6 text-left amountSacrifice">          
+                <input type="number" name="amount" id="amountSacrifice" class="form-control amountSacrifice" placeholder="Sacrifice" maxlength="8"> 
+              </div> 
+  
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountMedicalOutreach" class="form-control amountMedicalOutreach" placeholder="Medical Outreach" maxlength="8"> 
+              </div>
+                
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountSpecialProject" class="form-control amountSpecialProject" placeholder="Special Project" maxlength="8"> 
+              </div>
+                
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountBuilding" class="form-control amountBuilding" placeholder="Building" maxlength="8"> 
+              </div>
+                
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountGeneralOffering" class="form-control amountGeneralOffering" placeholder="General Offering" maxlength="8"> 
+              </div>
+                
+                
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountBenevolence" class="form-control amountBenevolence" placeholder="Benevolence" maxlength="8"> 
+              </div>
+                
+                
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountTitheOffering" class="form-control amountTitheOffering" placeholder="Tithe Offering" maxlength="8"> 
+              </div>
+                
+                
+              <div class="form-group col-sm-12 col-lg-6 text-left">          
+                <input type="number" name="amount" id="amountFundRaising" class="form-control amountFundRaising" placeholder="Fund raising" maxlength="8"> 
+              </div>
+                
+          </div>
+          <div class="form-group col-12 text-center">
+                <input type="submit" value="GIVE" class="form-control btn btn-dark col-6 " id="btnGive">
+                <span id="modalToggler" data-toggle="modal" data-target="#modelId"></span>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+  
+    <div class="container text-center">
+      <div class="row">
+        <div class="form-group col-12 text-center mt-3">                  
+            <img src="./img/MasterCard.png" alt="Master card">
+            <img src="./img/Credit_Card.png" alt="Credit card">
+            <img src="./img/PayPal.png" alt="Paypal">               
+            <img src="./img/Visa.png" alt="Visa card">                           
+        </div>    
+      </div>
+      <h5 class="mb-4">
+        Powered by <a href="https://churchplus.co/">Church Plus</a>
+      </h5>
+    </div>
+  </div>
+  
+    <script src="js/jquery.js"></script>  
+    <script src="js/jquery-3.5.1.slim.min.js"></script>          
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>     
+    <script src="js/main.js"></script>
+</body>
+</html>
